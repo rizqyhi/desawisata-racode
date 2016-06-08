@@ -5,7 +5,7 @@
             <div class='col-xs-12'>
               <div class='box'>
                 <div class='box-header'>
-                  <h3 class='box-title'>JURUSAN LIST</h3>
+                  <h3 class='box-title'>Dashboard Admin Desa</h3>
                 </div><!-- /.box-header -->
 
                 <div class='box-body'>

@@ -26,7 +26,7 @@ class Home extends CI_Controller
             'page_title' => 'Admin Desa',
         );
 
-        $this->template->load('template', 'admin_desa/home', $data);
+        $this->template->load('admin_desa/template', 'admin_desa/home', $data);
     }
 
 }
