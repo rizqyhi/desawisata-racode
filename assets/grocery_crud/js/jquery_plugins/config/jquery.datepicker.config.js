@@ -1,4 +1,4 @@
-$(function(){
+(function($){
 	$('.datepicker-input').datepicker({
 			dateFormat: js_date_format,
 			showButtonPanel: true,
@@ -13,4 +13,4 @@ $(function(){
 		return false;
 	});
 	
-});
+})(jQuery);
