@@ -3,15 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>CPANEL | Log in</title>
+        <title>Desa Wisata | Log in</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <!-- Bootstrap 3.3.5 -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>template/bootstrap/css/bootstrap.min.css">
         <!-- Font Awesome -->
         <link rel="stylesheet" href="<?php echo base_url() ?>template/font-awesome-4.4.0/css/font-awesome.min.css">
-        <!-- Ionicons -->
-        <link rel="stylesheet" href="<?php echo base_url() ?>template/ionicons-2.0.1/css/ionicons.min.css">
         <!-- Theme style -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>template/dist/css/AdminLTE.min.css">
         <!-- iCheck -->
@@ -27,7 +25,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                <a href="<?php echo base_url(); ?>"><b>HALAMAN</b> LOGIN</a>
+                <a href="<?php echo base_url(); ?>"><b>Desa</b> Wisata</a>
             </div><!-- /.login-logo -->
             <div class="login-box-body">
                 <p class="login-box-msg"><?php echo $message; ?></p>
@@ -59,11 +57,11 @@
         </div><!-- /.login-box -->
 
         <!-- jQuery 2.1.4 -->
-        <script src="<?php echo base_url(); ?>assets/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+        <script src="<?php echo base_url(); ?>template/plugins/jQuery/jQuery-2.1.4.min.js"></script>
         <!-- Bootstrap 3.3.5 -->
-        <script src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="<?php echo base_url(); ?>template/bootstrap/js/bootstrap.min.js"></script>
         <!-- iCheck -->
-        <script src="<?php echo base_url(); ?>assets/plugins/iCheck/icheck.min.js"></script>
+        <script src="<?php echo base_url(); ?>template/plugins/iCheck/icheck.min.js"></script>
         <script>
             $(function () {
                 $('input').iCheck({

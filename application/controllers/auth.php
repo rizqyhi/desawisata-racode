@@ -28,20 +28,20 @@ class Auth extends CI_Controller {
 			// redirect them to the home page because they must be an administrator to view this
 			return show_error('You must be an administrator to view this page.');
 		}
-		else
-		{
-			// set the flash data error message if there is one
-			$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
+		// else
+		// {
+		// 	// set the flash data error message if there is one
+		// 	$this->data['message'] = (validation_errors()) ? validation_errors() : $this->session->flashdata('message');
 
-			//list the users
-			$this->data['users'] = $this->ion_auth->users()->result();
-			foreach ($this->data['users'] as $k => $user)
-			{
-				$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
-			}
+		// 	//list the users
+		// 	$this->data['users'] = $this->ion_auth->users()->result();
+		// 	foreach ($this->data['users'] as $k => $user)
+		// 	{
+		// 		$this->data['users'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
+		// 	}
 
-			$this->_render_page('auth/index', $this->data);
-		}
+		// 	$this->_render_page('auth/index', $this->data);
+		// }
 	}
 
 	// log the user in
@@ -64,6 +64,10 @@ class Auth extends CI_Controller {
 				//if the login is successful
 				//redirect them back to the home page
 				$this->session->set_flashdata('message', $this->ion_auth->messages());
+				
+				if ($this->ion_auth->in_group('admin-desa')) {
+					redirect('admin_desa');
+				}
 				redirect('menu', 'refresh');
 			}
 			else
