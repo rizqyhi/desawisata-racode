@@ -19,7 +19,7 @@ function load_fancybox(elem)
 	});		
 }
 
-$(function(){
+(function($){
 	$('.gc-file-upload').each(function(){
 		var unique_id 	= $(this).attr('id');
 		var uploader_url = $(this).attr('rel');
@@ -157,4 +157,4 @@ $(function(){
 		});		    
 	    
 	});
-});
+})(jQuery);

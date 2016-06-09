@@ -29,9 +29,6 @@
         <?php if(isset($grocery->css_files)): foreach($grocery->css_files as $file): ?>
             <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
         <?php endforeach; endif; ?>
-        <?php if(isset($grocery->js_files)): foreach($grocery->js_files as $file): ?>
-            <script src="<?php echo $file; ?>"></script>
-        <?php endforeach; endif; ?>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
@@ -136,7 +133,10 @@
                  immediately after the control sidebar -->
             <div class="control-sidebar-bg"></div>
         </div><!-- ./wrapper -->
-
+        
+        <?php if(isset($grocery->js_files)): foreach($grocery->js_files as $file): ?>
+            <script src="<?php echo $file; ?>"></script>
+        <?php endforeach; endif; ?>
         <!-- jQuery 2.1.4 -->
         <script src="<?php echo base_url() ?>template/plugins/jQuery/jQuery-2.1.4.min.js"></script>
         <!-- Bootstrap 3.3.5 -->

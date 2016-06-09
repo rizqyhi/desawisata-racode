@@ -1,4 +1,4 @@
-$(function(){
+(function($){
 	$('.image-thumbnail').fancybox({
 		'transitionIn'	:	'elastic',
 		'transitionOut'	:	'elastic',
@@ -6,4 +6,4 @@ $(function(){
 		'speedOut'		:	200, 
 		'overlayShow'	:	false
 	});	
-});	
+})(jQuery);	

@@ -1,4 +1,4 @@
-$(function(){
+(function($){
 	$('.quickSearchButton').click(function(){
 		$(this).closest('.flexigrid').find('.quickSearchBox').slideToggle('normal');
 	});
@@ -241,7 +241,7 @@ $(function(){
 		}
 	}
 
-});
+})(jQuery);
 
 function displaying_and_pages(this_container)
 {

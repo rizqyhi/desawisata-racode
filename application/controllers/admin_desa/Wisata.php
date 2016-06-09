@@ -11,7 +11,12 @@ class Wisata extends CI_Controller
 	{
 		parent::__construct();
 
-		$this->load->library('grocery_CRUD');
+		$this->load->library(['ion_auth', 'grocery_CRUD']);
+
+		// sorry, you can not access this page unless you're an admin or admin-desa
+        if (!$this->ion_auth->in_group(['admin', 'admin-desa'])) {
+            redirect(site_url());
+        }
 	}
 
 	public function index()
@@ -21,6 +26,7 @@ class Wisata extends CI_Controller
 		// Seriously! This is all the code you need!
 		$crud->set_table('wisata');
 		$crud->set_subject('Wisata');
+		$crud->set_field_upload('foto', 'assets/uploads/files');
 		 
 		$output = $crud->render();
 
@@ -31,4 +37,4 @@ class Wisata extends CI_Controller
 
         $this->template->load('admin_desa/template', 'admin_desa/wisata', $data);
 	}
-}
+}	
